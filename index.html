@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Govila — compre nas lojas de Vilankulos e receba onde estiver.">
+  <meta name="theme-color" content="#0c4358">
+  <title>Govila — Marketplace de Vilankulos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Hugeicons Free Icon Font -->
+  <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="estilos/moeda.css">
+  <link rel="stylesheet" href="estilos/add.css">
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-inner">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menu">
+          <i class="hgi-stroke hgi-menu-01"></i>
+        </button>
+
+        <a class="brand" href="#" aria-label="Govila">
+          <img src="images/logo.png" alt="Govila">
+        </a>
+
+        <nav class="desktop-actions" aria-label="Ações">
+          <button class="header-action" aria-label="Favoritos">
+            <i class="hgi-stroke hgi-favourite"></i>
+            <span class="action-label">Favoritos</span>
+          </button>
+          <button class="header-action" aria-label="Perfil">
+            <i class="hgi-stroke hgi-user"></i>
+            <span class="action-label">Perfil</span>
+          </button>
+          <button class="header-action cart-trigger" id="cartBtn" aria-label="Carrinho">
+            <span class="badge" id="cartCount">0</span>
+            <i class="hgi-stroke hgi-shopping-cart-01"></i>
+            <span class="action-label">Carrinho</span>
+          </button>
+        </nav>
+
+        <div class="mobile-actions">
+          <button class="icon-btn" aria-label="Favoritos">
+            <i class="hgi-stroke hgi-user"></i>
+          </button>
+          <button class="icon-btn cart-trigger" id="mobileCartBtn" aria-label="Carrinho">
+            <span class="badge" id="mobileCartCount">0</span>
+            <i class="hgi-stroke hgi-shopping-cart-01"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- FIXED SEARCH BAR -->
+    <div class="search-bar-wrap">
+      <div class="search-bar">
+        <i class="hgi-stroke hgi-search-01"></i>
+        <input id="searchInput" type="search" placeholder="O que procura hoje?" autocomplete="off">
+        <button id="clearSearch" class="clear-search" aria-label="Limpar pesquisa">
+          <i class="hgi-stroke hgi-cancel-01"></i>
+        </button>
+        <div class="currency-selector" id="currencySelector">
+  <button class="currency-pill" id="currencyBtn" aria-expanded="false">
+    <span class="currency-flag" id="currencyFlag">🇲🇿</span>
+    <span id="currencyCode">MZN</span>
+    <i class="hgi-stroke hgi-arrow-down-01"></i>
+  </button>
+
+  <div class="currency-menu" id="currencyMenu">
+    <button class="currency-option active" data-currency="MZN">
+      <span>🇲🇿</span>
+      <strong>MZN</strong>
+      <small>Metical</small>
+    </button>
+
+    <button class="currency-option" data-currency="USD">
+      <span>🇺🇸</span>
+      <strong>USD</strong>
+      <small>Dólar</small>
+    </button>
+
+    <button class="currency-option" data-currency="ZAR">
+      <span>🇿🇦</span>
+      <strong>ZAR</strong>
+      <small>Rand</small>
+    </button>
+
+    <button class="currency-option" data-currency="AOA">
+      <span>🇦🇴</span>
+      <strong>AOA</strong>
+      <small>Kwanza</small>
+    </button>
+
+    <button class="currency-option" data-currency="EUR">
+      <span>🇪🇺</span>
+      <strong>EUR</strong>
+      <small>Euro</small>
+    </button>
+
+    <button class="currency-option" data-currency="BRL">
+      <span>🇧🇷</span>
+      <strong>BRL</strong>
+      <small>Real</small>
+    </button>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <!-- HORIZONTAL MENU -->
+    <nav class="quick-nav" aria-label="Navegação principal">
+      <div class="quick-nav-inner">
+        <a class="quick-link active" href="#inicio">Início</a>
+        <a class="quick-link" href="#lojas">Lojas</a>
+        <a class="quick-link" href="#categorias">Categorias</a>
+        <a class="quick-link" href="#promocoes">Promoções</a>
+        <a class="quick-link" href="#mais-vendidos">Mais vendidos</a>
+        <a class="quick-link" href="#entrega">Como funciona</a>
+      </div>
+    </nav>
+
+    <main id="inicio">
+
+      <!-- HERO -->
+      <section class="hero container">
+        <div class="hero-copy">
+          <span class="eyebrow"><i class="hgi-stroke hgi-location-01"></i> Compras locais em Vilankulos</span>
+          <h1>Compre perto.<br><span>Receba onde estiver.</span></h1>
+          <p>Encontre produtos das lojas da sua cidade, pague pela compra e entrega e receba diretamente no seu local.</p>
+          <div class="hero-buttons">
+            <a href="#lojas" class="btn btn-primary">Explorar lojas <i class="hgi-stroke hgi-arrow-right-02"></i></a>
+            <a href="#entrega" class="btn btn-light">Como funciona</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <span>Entrega local</span>
+            <i class="hgi-stroke hgi-package-delivered"></i>
+          </div>
+          <div class="delivery-map">
+            <div class="map-grid"></div>
+            <div class="map-route"></div>
+            <div class="map-pin store-pin"><i class="hgi-stroke hgi-store-01"></i></div>
+            <div class="map-pin user-pin"><i class="hgi-stroke hgi-location-01"></i></div>
+            <div class="map-car"><i class="hgi-stroke hgi-motorbike-02"></i></div>
+          </div>
+          <div class="delivery-status">
+            <div>
+              <strong>Entrega acompanhada</strong>
+              <small>Localização GPS do pedido</small>
+            </div>
+            <span class="status-dot"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CATEGORIES -->
+      <section class="section container" id="categorias">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Explore</span>
+            <h2>Categorias</h2>
+          </div>
+          <button class="text-btn" id="allCategoriesBtn">Ver todas <i class="hgi-stroke hgi-arrow-right-02"></i></button>
+        </div>
+
+        <div class="category-grid">
+          <button class="category-card" data-category="Supermercado">
+            <span class="category-icon green"><i class="hgi-stroke hgi-shopping-basket-01"></i></span>
+            <strong>Supermercado</strong>
+            <small>Produtos do dia a dia</small>
+          </button>
+          <button class="category-card" data-category="Restaurantes">
+            <span class="category-icon orange"><i class="hgi-stroke hgi-food-01"></i></span>
+            <strong>Restaurantes</strong>
+            <small>Comida e bebidas</small>
+          </button>
+          <button class="category-card" data-category="Eletrónica">
+            <span class="category-icon blue"><i class="hgi-stroke hgi-smart-phone-01"></i></span>
+            <strong>Eletrónica</strong>
+            <small>Telemóveis e acessórios</small>
+          </button>
+          <button class="category-card" data-category="Moda">
+            <span class="category-icon purple"><i class="hgi-stroke hgi-t-shirt"></i></span>
+            <strong>Moda</strong>
+            <small>Roupa e acessórios</small>
+          </button>
+          <button class="category-card" data-category="Farmácia">
+            <span class="category-icon red"><i class="hgi-stroke hgi-medicine-01"></i></span>
+            <strong>Farmácia</strong>
+            <small>Saúde e cuidados</small>
+          </button>
+          <button class="category-card" data-category="Casa">
+            <span class="category-icon yellow"><i class="hgi-stroke hgi-home-01"></i></span>
+            <strong>Casa</strong>
+            <small>Utilidades e decoração</small>
+          </button>
+        </div>
+      </section>
+
+      <!-- PROMOTION -->
+      <section class="promo-section container" id="promocoes">
+        <div class="promo-card">
+          <div class="promo-content">
+            <span class="promo-tag">OFERTAS DA SEMANA</span>
+            <h2>Produtos selecionados<br>com preços especiais.</h2>
+            <p>Descubra promoções das lojas parceiras e receba em Vilankulos.</p>
+            <button class="btn btn-dark" id="promoBtn">Ver promoções <i class="hgi-stroke hgi-arrow-right-02"></i></button>
+          </div>
+          <div class="promo-art">
+            <div class="promo-circle"></div>
+            <div class="promo-bag"><i class="hgi-stroke hgi-shopping-bag-02"></i></div>
+            <span class="floating-price">-20%</span>
+            <span class="floating-tag">HOJE</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- STORES -->
+      <section class="section container" id="lojas">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Comerciantes parceiros</span>
+            <h2>Lojas em destaque</h2>
+          </div>
+          <button class="text-btn">Ver todas <i class="hgi-stroke hgi-arrow-right-02"></i></button>
+        </div>
+
+        <div class="store-grid">
+          <article class="store-card">
+            <div class="store-cover store-cover-one">
+              <span class="open-badge"><i class="hgi-stroke hgi-checkmark-circle-02"></i> Aberta</span>
+              <div class="store-logo">M</div>
+            </div>
+            <div class="store-body">
+              <div class="store-title">
+                <div><h3>Mercado Vilankulos</h3><small><i class="hgi-stroke hgi-star"></i> 4.8 · 10–25 min</small></div>
+                <button class="follow-btn">
+  <i class="hgi-stroke hgi-add-01"></i>
+  <span>Seguir</span>
+</button>
+              </div>
+              <p>Supermercado · Alimentação · Bebidas</p>
+              <button class="store-link" data-store="Mercado Vilankulos">Ver loja <i class="hgi-stroke hgi-arrow-right-02"></i></button>
+            </div>
+          </article>
+
+          <article class="store-card">
+            <div class="store-cover store-cover-two">
+              <span class="open-badge"><i class="hgi-stroke hgi-checkmark-circle-02"></i> Aberta</span>
+              <div class="store-logo">P</div>
+            </div>
+            <div class="store-body">
+              <div class="store-title">
+                <div><h3>Praia Shopping</h3><small><i class="hgi-stroke hgi-star"></i> 4.7 · 15–30 min</small></div>
+                <button class="follow-btn">
+  <i class="hgi-stroke hgi-add-01"></i>
+  <span>Seguir</span>
+</button>
+              </div>
+              <p>Moda · Eletrónica · Acessórios</p>
+              <button class="store-link" data-store="Praia Shopping">Ver loja <i class="hgi-stroke hgi-arrow-right-02"></i></button>
+            </div>
+          </article>
+
+          <article class="store-card">
+            <div class="store-cover store-cover-three">
+              <span class="open-badge"><i class="hgi-stroke hgi-checkmark-circle-02"></i> Aberta</span>
+              <div class="store-logo">C</div>
+            </div>
+            <div class="store-body">
+              <div class="store-title">
+                <div><h3>Cantinho da Praia</h3><small><i class="hgi-stroke hgi-star"></i> 4.9 · 15–25 min</small></div>
+                <button class="follow-btn">
+  <i class="hgi-stroke hgi-add-01"></i>
+  <span>Seguir</span>
+</button>
+              </div>
+              <p>Restaurante · Comida · Bebidas</p>
+              <button class="store-link" data-store="Cantinho da Praia">Ver loja <i class="hgi-stroke hgi-arrow-right-02"></i></button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section class="section container" id="mais-vendidos">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Para si</span>
+            <h2>Produtos populares</h2>
+          </div>
+          <div class="product-filters">
+            <button class="filter-btn active" data-filter="Todos">Todos</button>
+            <button class="filter-btn" data-filter="Alimentação">Alimentação</button>
+            <button class="filter-btn" data-filter="Casa">Casa</button>
+            <button class="filter-btn" data-filter="Eletrónica">Eletrónica</button>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+</div>
+
+<div id="emptyProducts" class="empty-state" hidden>
+  <i class="hgi-stroke hgi-search-01"></i>
+  <h3>Nenhum produto encontrado</h3>
+  <p>Tente outra pesquisa ou categoria.</p>
+</div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="steps-section" id="entrega">
+        <div class="container">
+          <div class="section-head centered">
+            <div>
+              <span class="section-kicker">Simples e rápido</span>
+              <h2>Como funciona?</h2>
+              <p>Do produto à sua porta em poucos passos.</p>
+            </div>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step">
+              <span class="step-number">01</span>
+              <i class="hgi-stroke hgi-store-01"></i>
+              <h3>Escolha a loja</h3>
+              <p>Encontre uma loja parceira e explore os produtos disponíveis.</p>
+            </div>
+            <div class="step">
+              <span class="step-number">02</span>
+              <i class="hgi-stroke hgi-shopping-cart-01"></i>
+              <h3>Faça o pedido</h3>
+              <p>Adicione produtos ao carrinho e confirme a compra.</p>
+            </div>
+            <div class="step">
+              <span class="step-number">03</span>
+              <i class="hgi-stroke hgi-location-01"></i>
+              <h3>Envie a localização</h3>
+              <p>Partilhe o GPS para indicar exatamente onde deseja receber.</p>
+            </div>
+            <div class="step">
+              <span class="step-number">04</span>
+              <i class="hgi-stroke hgi-package-delivered"></i>
+              <h3>Receba o pedido</h3>
+              <p>Um entregador recolhe o pedido e leva-o até si.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta container">
+        <div>
+          <span class="section-kicker">Para comerciantes</span>
+          <h2>Tem uma loja em Vilankulos?</h2>
+          <p>Coloque os seus produtos no Govila e alcance mais clientes.</p>
+        </div>
+        <button class="btn btn-white" id="partnerBtn">Quero ser parceiro <i class="hgi-stroke hgi-arrow-right-02"></i></button>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Govila">
+          <p>Marketplace local para comprar em Vilankulos e receber onde estiver.</p>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><i class="hgi-stroke hgi-facebook-01"></i></a>
+            <a href="#" aria-label="Instagram"><i class="hgi-stroke hgi-instagram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="hgi-stroke hgi-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Comprar</h4>
+          <a href="#lojas">Lojas</a>
+          <a href="#categorias">Categorias</a>
+          <a href="#promocoes">Promoções</a>
+          <a href="#mais-vendidos">Produtos</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ajuda</h4>
+          <a href="#">Como funciona</a>
+          <a href="#">Entregas</a>
+          <a href="#">Pagamentos</a>
+          <a href="#">Contactos</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Para lojas</h4>
+          <a href="#">Ser parceiro</a>
+          <a href="#">Área do comerciante</a>
+          <a href="#">Termos para parceiros</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom container">
+        <span>© 2026 Govila. Todos os direitos reservados.</span>
+        <div><a href="#">Privacidade</a><a href="#">Termos</a></div>
+      </div>
+    </footer>
+
+    <!-- SIDE MENU -->
+    <div class="overlay" id="overlay"></div>
+    <aside class="side-menu" id="sideMenu" aria-label="Menu">
+      <div class="side-menu-head">
+        <img src="images/logo.png" alt="Govila">
+        <button class="icon-btn" id="closeMenu" aria-label="Fechar menu"><i class="hgi-stroke hgi-cancel-01"></i></button>
+      </div>
+      <div class="side-user">
+        <span class="avatar"><i class="hgi-stroke hgi-user"></i></span>
+        <div><strong>Olá, visitante</strong><small>Entre na sua conta</small></div>
+        <i class="hgi-stroke hgi-arrow-right-02"></i>
+      </div>
+      <nav class="side-links">
+        <a href="#inicio"><i class="hgi-stroke hgi-home-01"></i> Início</a>
+        <a href="#lojas"><i class="hgi-stroke hgi-store-01"></i> Lojas</a>
+        <a href="#categorias"><i class="hgi-stroke hgi-grid-view"></i> Categorias</a>
+        <a href="#promocoes"><i class="hgi-stroke hgi-sale-tag-02"></i> Promoções</a>
+        <a href="#mais-vendidos"><i class="hgi-stroke hgi-fire"></i> Mais vendidos</a>
+        <a href="#entrega"><i class="hgi-stroke hgi-information-circle"></i> Como funciona</a>
+      </nav>
+      <div class="side-menu-footer">
+        <button><i class="hgi-stroke hgi-headphones"></i> Ajuda e suporte</button>
+        <button><i class="hgi-stroke hgi-building-03"></i> Quero vender no Govila</button>
+      </div>
+    </aside>
+
+    <!-- CART DRAWER -->
+    <aside class="cart-drawer" id="cartDrawer">
+      <div class="cart-head">
+        <div><span class="section-kicker">Seu pedido</span><h2>Carrinho</h2></div>
+        <button class="icon-btn" id="closeCart"><i class="hgi-stroke hgi-cancel-01"></i></button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty">
+          <i class="hgi-stroke hgi-shopping-cart-01"></i>
+          <h3>Seu carrinho está vazio</h3>
+          <p>Adicione produtos para começar.</p>
+        </div>
+      </div>
+      <div class="cart-summary">
+        <div><span>Subtotal</span><strong id="cartSubtotal">0 MT</strong></div>
+        <div><span>Entrega estimada</span><strong id="deliveryFee">80 MT</strong></div>
+        <div class="cart-total"><span>Total</span><strong id="cartTotal">0 MT</strong></div>
+        <button class="btn btn-primary checkout-btn" id="checkoutBtn">Continuar para pagamento <i class="hgi-stroke hgi-arrow-right-02"></i></button>
+        <small><i class="hgi-stroke hgi-shield-01"></i> Pagamento e localização protegidos.</small>
+      </div>
+    </aside>
+
+    <div class="toast" id="toast"><i class="hgi-stroke hgi-checkmark-circle-02"></i><span>Produto adicionado.</span></div>
+  </div>
+
+  <script src="moeda.js"></script>
+  <script src="script.js"></script>
+  <script src="store.js"></script>
+  <script src="scripts/add.js"></script>
+</body>
+</html>

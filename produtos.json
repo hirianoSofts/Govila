@@ -1,0 +1,42 @@
+[
+  {
+    "id": "agua",
+    "nome": "Água Mineral 1.5L",
+    "categoria": "Alimentação",
+    "loja": "Mercado Vilankulos",
+    "preco": 35,
+    "precoAntigo": 39,
+    "badge": "-10%",
+    "imagem": "https://images.unsplash.com/photo-1564419320461-6870880221ad?auto=format&fit=crop&w=600&q=85"
+  },
+  {
+    "id": "arroz",
+    "nome": "Arroz 5kg",
+    "categoria": "Alimentação",
+    "loja": "Mercado Vilankulos",
+    "preco": 450,
+    "precoAntigo": null,
+    "badge": "Popular",
+    "imagem": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=85"
+  },
+  {
+    "id": "detergente",
+    "nome": "Detergente 500ml",
+    "categoria": "Casa",
+    "loja": "Mercado Vilankulos",
+    "preco": 85,
+    "precoAntigo": 100,
+    "badge": "-15%",
+    "imagem": "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=600&q=85"
+  },
+  {
+    "id": "cabo",
+    "nome": "Cabo USB-C",
+    "categoria": "Eletrónica",
+    "loja": "Praia Shopping",
+    "preco": 300,
+    "precoAntigo": null,
+    "badge": "Novo",
+    "imagem": "https://images.unsplash.com/photo-1587033411391-5d9e51cce126?auto=format&fit=crop&w=600&q=85"
+  }
+]
