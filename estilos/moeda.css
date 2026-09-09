@@ -1,0 +1,108 @@
+/* CURRENCY SELECTOR */
+.currency-selector {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.currency-pill {
+  height: 36px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 9px;
+  background: var(--white);
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+  transition: .2s ease;
+}
+
+.currency-pill:hover {
+  background: #f8fafb;
+}
+
+.currency-pill i {
+  font-size: 13px;
+  transition: transform .2s ease;
+}
+
+.currency-selector.open .currency-pill i {
+  transform: rotate(180deg);
+}
+
+.currency-flag {
+  font-size: 17px;
+  line-height: 1;
+}
+
+/* MENU DE MOEDAS */
+.currency-menu {
+  position: absolute;
+  top: calc(100% + 9px);
+  right: 0;
+  width: 220px;
+  padding: 7px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  box-shadow: 0 15px 40px rgba(12,44,57,.14);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: .2s ease;
+  z-index: 1500;
+}
+
+.currency-selector.open .currency-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.currency-option {
+  min-height: 48px;
+  padding: 7px;
+  border-radius: 9px;
+  background: transparent;
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 5px;
+  text-align: left;
+  transition: .15s ease;
+}
+
+.currency-option:hover {
+  background: #f2f5f6;
+}
+
+.currency-option.active {
+  background: #edf4f6;
+}
+
+.currency-option > span {
+  grid-row: 1 / 3;
+  align-self: center;
+  font-size: 19px;
+}
+
+.currency-option strong {
+  font-size: 10px;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.currency-option small {
+  font-size: 7px;
+  color: var(--muted);
+  line-height: 1.2;
+}
