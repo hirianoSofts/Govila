@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Veja os detalhes do produto no Govila e faça o seu pedido."
+  >
+
+  <meta name="theme-color" content="#0c4358">
+
+  <title>Produto — Govila</title>
+
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Hugeicons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"
+  >
+  
+  <!-- Flaticon -->
+<link
+  rel="stylesheet"
+  href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../estilos/moeda.css">
+  <link rel="stylesheet" href="../estilos/add.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/product.css">
+</head>
+
+<body>
+
+<div class="page-shell">
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
+  <header class="site-header">
+
+    <div class="header-inner">
+
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn"
+        aria-label="Abrir menu"
+      >
+        <i class="hgi-stroke hgi-menu-01"></i>
+      </button>
+
+      <a
+        class="brand"
+        href="../index.html"
+        aria-label="Govila"
+      >
+        <img
+          src="../images/logo.png"
+          alt="Govila"
+        >
+      </a>
+
+      <!-- DESKTOP -->
+
+      <nav
+        class="desktop-actions"
+        aria-label="Ações"
+      >
+
+        <button
+          class="header-action"
+          aria-label="Favoritos"
+        >
+          <i class="hgi-stroke hgi-favourite"></i>
+          <span class="action-label">
+            Favoritos
+          </span>
+        </button>
+
+        <button
+          class="header-action"
+          aria-label="Perfil"
+        >
+          <i class="hgi-stroke hgi-user"></i>
+          <span class="action-label">
+            Perfil
+          </span>
+        </button>
+
+        <button
+          class="header-action cart-trigger"
+          id="cartBtn"
+          aria-label="Carrinho"
+        >
+
+          <span
+            class="badge"
+            id="cartCount"
+          >
+            0
+          </span>
+
+          <i class="hgi-stroke hgi-shopping-cart-01"></i>
+
+          <span class="action-label">
+            Carrinho
+          </span>
+
+        </button>
+
+      </nav>
+
+      <!-- MOBILE -->
+
+      <div class="mobile-actions">
+
+        <button
+          class="icon-btn"
+          aria-label="Favoritos"
+        >
+          <i class="hgi-stroke hgi-favourite"></i>
+        </button>
+
+        <button
+          class="icon-btn cart-trigger"
+          id="mobileCartBtn"
+          aria-label="Carrinho"
+        >
+
+          <span
+            class="badge"
+            id="mobileCartCount"
+          >
+            0
+          </span>
+
+          <i class="hgi-stroke hgi-shopping-cart-01"></i>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================
+       SEARCH
+  ========================================== -->
+
+  <div class="search-bar-wrap">
+
+    <div class="search-bar">
+
+      <i class="hgi-stroke hgi-search-01"></i>
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="O que procura hoje?"
+        autocomplete="off"
+      >
+
+      <button
+        id="clearSearch"
+        class="clear-search"
+        aria-label="Limpar pesquisa"
+      >
+        <i class="hgi-stroke hgi-cancel-01"></i>
+      </button>
+
+
+      <!-- MOEDA -->
+
+      <div
+        class="currency-selector"
+        id="currencySelector"
+      >
+
+        <button
+          class="currency-pill"
+          id="currencyBtn"
+          aria-expanded="false"
+        >
+
+          <span
+            class="currency-flag"
+            id="currencyFlag"
+          >
+            🇲🇿
+          </span>
+
+          <span id="currencyCode">
+            MZN
+          </span>
+
+          <i class="hgi-stroke hgi-arrow-down-01"></i>
+
+        </button>
+
+
+        <div
+          class="currency-menu"
+          id="currencyMenu"
+        >
+
+          <button
+            class="currency-option active"
+            data-currency="MZN"
+          >
+            <span>🇲🇿</span>
+            <strong>MZN</strong>
+            <small>Metical</small>
+          </button>
+
+          <button
+            class="currency-option"
+            data-currency="USD"
+          >
+            <span>🇺🇸</span>
+            <strong>USD</strong>
+            <small>Dólar</small>
+          </button>
+
+          <button
+            class="currency-option"
+            data-currency="ZAR"
+          >
+            <span>🇿🇦</span>
+            <strong>ZAR</strong>
+            <small>Rand</small>
+          </button>
+
+          <button
+            class="currency-option"
+            data-currency="AOA"
+          >
+            <span>🇦🇴</span>
+            <strong>AOA</strong>
+            <small>Kwanza</small>
+          </button>
+
+          <button
+            class="currency-option"
+            data-currency="EUR"
+          >
+            <span>🇪🇺</span>
+            <strong>EUR</strong>
+            <small>Euro</small>
+          </button>
+
+          <button
+            class="currency-option"
+            data-currency="BRL"
+          >
+            <span>🇧🇷</span>
+            <strong>BRL</strong>
+            <small>Real</small>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       QUICK NAV
+  ========================================== -->
+
+  <nav
+    class="quick-nav"
+    aria-label="Navegação principal"
+  >
+
+    <div class="quick-nav-inner">
+
+      <a
+        class="quick-link"
+        href="../index.html"
+      >
+        Início
+      </a>
+
+      <a
+        class="quick-link"
+        href="../index.html#lojas"
+      >
+        Lojas
+      </a>
+
+      <a
+        class="quick-link"
+        href="../index.html#categorias"
+      >
+        Categorias
+      </a>
+
+      <a
+        class="quick-link"
+        href="../index.html#promocoes"
+      >
+        Promoções
+      </a>
+
+      <a
+        class="quick-link"
+        href="../index.html#mais-vendidos"
+      >
+        Mais vendidos
+      </a>
+
+      <a
+        class="quick-link"
+        href="../index.html#entrega"
+      >
+        Como funciona
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =========================================
+       PRODUTO
+  ========================================== -->
+
+  <main>
+
+    <section class="product-detail container">
+
+      <!-- BREADCRUMB -->
+
+      <div class="product-breadcrumb">
+
+        <a href="../index.html">
+          Início
+        </a>
+
+        <i class="hgi-stroke hgi-arrow-right-02"></i>
+
+        <span id="breadcrumbCategory">
+          Produtos
+        </span>
+
+        <i class="hgi-stroke hgi-arrow-right-02"></i>
+
+        <strong id="breadcrumbName">
+          Produto
+        </strong>
+
+      </div>
+
+
+      <!-- PRODUTO -->
+
+      <div class="product-detail-grid">
+
+        <!-- GALERIA -->
+
+        <div class="product-gallery">
+
+          <div
+            class="product-main-image"
+            id="productImage"
+          >
+
+            <span
+              class="product-detail-badge"
+              id="productBadge"
+            >
+              Popular
+            </span>
+
+            <button
+              class="detail-heart"
+              id="favoriteProduct"
+              aria-label="Adicionar aos favoritos"
+            >
+              <i class="hgi-stroke hgi-favourite"></i>
+            </button>
+
+            <span
+              class="detail-emoji"
+              id="productEmoji"
+            >
+              💧
+            </span>
+
+          </div>
+
+
+          <div class="product-thumbnails">
+
+            <button class="thumbnail active">
+              <span id="thumbEmoji">
+                💧
+              </span>
+            </button>
+
+            <button class="thumbnail">
+              <i class="hgi-stroke hgi-image-01"></i>
+            </button>
+
+            <button class="thumbnail">
+              <i class="hgi-stroke hgi-image-01"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- INFORMAÇÕES -->
+
+        <div class="product-detail-info">
+
+          <span
+            class="detail-store"
+            id="productStore"
+          >
+            Mercado Vilankulos
+          </span>
+
+          <h1 id="productName">
+            Água Mineral 1.5L
+          </h1>
+
+
+          <div class="product-rating">
+
+  <div class="rating-stars" aria-label="Avaliação 4.8 de 5">
+
+    <i class="fi fi-rr-star"></i>
+    <i class="fi fi-rr-star"></i>
+    <i class="fi fi-rr-star"></i>
+    <i class="fi fi-rr-star"></i>
+    <i class="fi fi-rr-star"></i>
+
+  </div>
+
+  <strong id="productRating">
+    4.8
+  </strong>
+
+  <span class="rating-count">
+    24 avaliações
+  </span>
+
+</div>
+
+
+          <div class="detail-price">
+
+            <strong
+              id="productPrice"
+              class="product-price"
+              data-price-mzn="35"
+            >
+              35 MT
+            </strong>
+
+            <del
+              id="productOldPrice"
+              class="product-old-price"
+            >
+              39 MT
+            </del>
+
+            <span
+              id="productDiscount"
+              class="discount"
+            >
+              -10%
+            </span>
+
+          </div>
+
+
+          <div class="detail-divider"></div>
+
+
+          <div class="detail-description">
+
+            <h3>
+              Sobre este produto
+            </h3>
+
+            <p id="productDescription">
+              Água mineral de qualidade, ideal para consumo diário.
+              Produto disponível no Mercado Vilankulos.
+            </p>
+
+          </div>
+
+
+          <!-- ENTREGA -->
+
+          <div class="delivery-info">
+
+            <div class="delivery-info-icon">
+              <i class="hgi-stroke hgi-delivery-truck-01"></i>
+            </div>
+
+            <div>
+
+              <strong>
+                Entrega em Vilankulos
+              </strong>
+
+              <small>
+                Receba onde estiver
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <!-- STOCK -->
+
+          <div class="stock-info">
+
+            <i class="hgi-stroke hgi-checkmark-circle-02"></i>
+
+            <span>
+              Disponível em stock
+            </span>
+
+          </div>
+
+
+          <!-- QUANTIDADE -->
+
+          <div class="purchase-area">
+
+            <div class="quantity-selector">
+
+              <button
+                id="detailMinus"
+                type="button"
+                aria-label="Diminuir quantidade"
+              >
+                −
+              </button>
+
+              <strong id="detailQuantity">
+                1
+              </strong>
+
+              <button
+                id="detailPlus"
+                type="button"
+                aria-label="Aumentar quantidade"
+              >
+                +
+              </button>
+
+            </div>
+
+
+            <button
+              class="detail-add-btn"
+              id="detailAddBtn"
+            >
+
+              <i class="hgi-stroke hgi-shopping-cart-01"></i>
+
+              Adicionar ao carrinho
+
+            </button>
+
+          </div>
+
+
+          <!-- BENEFÍCIOS -->
+
+          <div class="product-benefits">
+
+            <div>
+
+              <i class="hgi-stroke hgi-shield-01"></i>
+
+              <span>
+                Compra segura
+              </span>
+
+            </div>
+
+            <div>
+
+              <i class="hgi-stroke hgi-location-01"></i>
+
+              <span>
+                Entrega local
+              </span>
+
+            </div>
+
+            <div>
+
+              <i class="hgi-stroke hgi-headphones"></i>
+
+              <span>
+                Suporte Govila
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      
+      <!-- =========================================
+     LOJA VENDEDORA
+========================================== -->
+
+<section class="seller-store">
+
+  <div class="seller-store-main">
+
+    <div class="seller-logo">
+
+      <i class="hgi-stroke hgi-store-01"></i>
+
+    </div>
+
+    <div class="seller-info">
+
+      <span class="seller-label">
+        Vendido por
+      </span>
+
+      <h3>
+        <span id="sellerStoreName">
+          Mercado Vilankulos
+        </span>
+
+        <i
+          class="hgi-stroke hgi-checkmark-badge-01"
+          title="Loja verificada"
+        ></i>
+      </h3>
+
+      <div class="seller-rating">
+
+        <div class="seller-stars">
+
+          <i class="fi fi-rr-star"></i>
+          <i class="fi fi-rr-star"></i>
+          <i class="fi fi-rr-star"></i>
+          <i class="fi fi-rr-star"></i>
+          <i class="fi fi-rr-star"></i>
+
+        </div>
+
+        <strong>
+          4.8
+        </strong>
+
+        <span>
+          · 126 avaliações
+        </span>
+
+      </div>
+
+      <small>
+        Loja parceira do Govila · Vilankulos
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <a
+    href="#"
+    class="seller-store-btn"
+  >
+    Ver loja
+
+    <i class="hgi-stroke hgi-arrow-right-02"></i>
+
+  </a>
+
+</section>
+
+
+      <!-- =========================================
+           DETALHES
+      ========================================== -->
+
+      <div class="product-extra">
+
+        <div class="extra-tabs">
+
+          <button class="extra-tab active">
+            Descrição
+          </button>
+
+          <button class="extra-tab">
+            Entrega
+          </button>
+
+          <button class="extra-tab">
+            Avaliações
+          </button>
+
+        </div>
+
+
+        <div class="extra-content">
+
+          <h2>
+            Detalhes do produto
+          </h2>
+
+          <p id="longDescription">
+            Este produto está disponível através de uma das
+            lojas parceiras do Govila em Vilankulos.
+            Faça o seu pedido e receba no local indicado durante
+            o processo de entrega.
+          </p>
+
+        </div>
+
+      </div>
+      
+      <!-- =========================================
+     AVALIAÇÕES
+========================================== -->
+
+<section class="reviews-section">
+
+  <div class="reviews-head">
+
+    <div>
+
+      <span class="section-kicker">
+        Opiniões dos clientes
+      </span>
+
+      <h2>
+        Avaliações do produto
+      </h2>
+
+    </div>
+
+    <button
+      class="review-write-btn"
+      id="openReviewBtn"
+      type="button"
+    >
+
+      <i class="hgi-stroke hgi-edit-02"></i>
+
+      Avaliar produto
+
+    </button>
+
+  </div>
+
+
+  <!-- RESUMO -->
+
+  <div class="reviews-summary">
+
+    <div class="rating-big">
+
+      <strong>
+        4.8
+      </strong>
+
+      <div class="rating-big-stars">
+
+        <i class="fi fi-rr-star"></i>
+        <i class="fi fi-rr-star"></i>
+        <i class="fi fi-rr-star"></i>
+        <i class="fi fi-rr-star"></i>
+        <i class="fi fi-rr-star"></i>
+
+      </div>
+
+      <span>
+        24 avaliações
+      </span>
+
+    </div>
+
+
+    <div class="rating-bars">
+
+      <div class="rating-bar">
+
+        <span>5</span>
+
+        <i class="fi fi-rr-star"></i>
+
+        <div>
+          <span style="width:82%"></span>
+        </div>
+
+        <small>82%</small>
+
+      </div>
+
+
+      <div class="rating-bar">
+
+        <span>4</span>
+
+        <i class="fi fi-rr-star"></i>
+
+        <div>
+          <span style="width:12%"></span>
+        </div>
+
+        <small>12%</small>
+
+      </div>
+
+
+      <div class="rating-bar">
+
+        <span>3</span>
+
+        <i class="fi fi-rr-star"></i>
+
+        <div>
+          <span style="width:4%"></span>
+        </div>
+
+        <small>4%</small>
+
+      </div>
+
+
+      <div class="rating-bar">
+
+        <span>2</span>
+
+        <i class="fi fi-rr-star"></i>
+
+        <div>
+          <span style="width:1%"></span>
+        </div>
+
+        <small>1%</small>
+
+      </div>
+
+
+      <div class="rating-bar">
+
+        <span>1</span>
+
+        <i class="fi fi-rr-star"></i>
+
+        <div>
+          <span style="width:1%"></span>
+        </div>
+
+        <small>1%</small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- AVALIAÇÕES DOS CLIENTES -->
+
+  <div class="reviews-list">
+
+    <article class="review-item">
+
+      <div class="review-avatar">
+        A
+      </div>
+
+      <div class="review-body">
+
+        <div class="review-top">
+
+          <div>
+
+            <strong>
+              Ana M.
+            </strong>
+
+            <span class="verified-review">
+              <i class="hgi-stroke hgi-checkmark-circle-02"></i>
+              Compra verificada
+            </span>
+
+          </div>
+
+          <small>
+            Há 2 dias
+          </small>
+
+        </div>
+
+
+        <div class="review-stars">
+
+          <i class="fi fi-rr-star"></i>
+          <i class="fi fi-rr-star"></i>
+          <i class="fi fi-rr-star"></i>
+          <i class="fi fi-rr-star"></i>
+          <i class="fi fi-rr-star"></i>
+
+        </div>
+
+
+        <p>
+          Produto muito bom e chegou rapidamente.
+          A entrega foi feita sem problemas.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="review-item">
+
+      <div class="review-avatar">
+        J
+      </div>
+
+      <div class="review-body">
+
+        <div class="review-top">
+
+          <div>
+
+            <strong>
+              João C.
+            </strong>
+
+            <span class="verified-review">
+              <i class="hgi-stroke hgi-checkmark-circle-02"></i>
+              Compra verificada
+            </span>
+
+          </div>
+
+          <small>
+            Há 5 dias
+          </small>
+
+        </div>
+
+
+        <div class="review-stars">
+
+          <i class="fi fi-rr-star"></i>
+          <i class="fi fi-rr-star"></i>
+          <i class="fi fi-rr-star"></i>
+          <i class="fi fi-rr-star"></i>
+          <i class="fi fi-rr-star"></i>
+
+        </div>
+
+
+        <p>
+          Boa qualidade. Recomendo a compra pelo Govila.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+
+  <button
+    class="reviews-more"
+    type="button"
+  >
+    Ver todas as avaliações
+
+    <i class="hgi-stroke hgi-arrow-down-01"></i>
+
+  </button>
+
+</section>
+
+    </section>
+    
+    <!-- =========================================
+     ESCREVER AVALIAÇÃO
+========================================== -->
+
+<section
+  class="write-review"
+  id="writeReview"
+>
+
+  <div class="write-review-head">
+
+    <div>
+
+      <span class="section-kicker">
+        Sua opinião importa
+      </span>
+
+      <h2>
+        Avalie este produto
+      </h2>
+
+      <p>
+        Conte a outros clientes como foi a sua experiência.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="user-rating">
+
+    <span>
+      Sua classificação
+    </span>
+
+    <div
+      class="interactive-stars"
+      id="interactiveStars"
+    >
+
+      <button type="button" data-rating="1">
+        <i class="fi fi-rr-star"></i>
+      </button>
+
+      <button type="button" data-rating="2">
+        <i class="fi fi-rr-star"></i>
+      </button>
+
+      <button type="button" data-rating="3">
+        <i class="fi fi-rr-star"></i>
+      </button>
+
+      <button type="button" data-rating="4">
+        <i class="fi fi-rr-star"></i>
+      </button>
+
+      <button type="button" data-rating="5">
+        <i class="fi fi-rr-star"></i>
+      </button>
+
+    </div>
+
+    <strong id="ratingText">
+      Selecione uma classificação
+    </strong>
+
+  </div>
+
+
+  <textarea
+    id="reviewText"
+    class="review-textarea"
+    placeholder="Escreva a sua avaliação..."
+    maxlength="500"
+  ></textarea>
+
+
+  <div class="review-footer">
+
+    <small>
+      Máximo de 500 caracteres
+    </small>
+
+    <button
+      type="button"
+      class="review-submit"
+      id="submitReview"
+    >
+
+      Publicar avaliação
+
+      <i class="hgi-stroke hgi-arrow-right-02"></i>
+
+    </button>
+
+  </div>
+
+</section>
+
+
+    <!-- =========================================
+         PRODUTOS RELACIONADOS
+    ========================================== -->
+
+    <section class="related-products">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div>
+
+            <span class="section-kicker">
+              Pode também gostar
+            </span>
+
+            <h2>
+              Produtos relacionados
+            </h2>
+
+          </div>
+
+          <a
+            href="../index.html#mais-vendidos"
+            class="text-btn"
+          >
+            Ver todos
+
+            <i class="hgi-stroke hgi-arrow-right-02"></i>
+
+          </a>
+
+        </div>
+
+
+        <div
+          class="related-grid"
+          id="relatedProducts"
+        >
+
+          <!-- Gerado pelo product.js -->
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <img
+          src="../images/logo.png"
+          alt="Govila"
+        >
+
+        <p>
+          Marketplace local para comprar em Vilankulos
+          e receber onde estiver.
+        </p>
+
+        <div class="socials">
+
+          <a href="#" aria-label="Facebook">
+            <i class="hgi-stroke hgi-facebook-01"></i>
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <i class="hgi-stroke hgi-instagram"></i>
+          </a>
+
+          <a href="#" aria-label="WhatsApp">
+            <i class="hgi-stroke hgi-whatsapp"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>
+          Comprar
+        </h4>
+
+        <a href="../index.html#lojas">
+          Lojas
+        </a>
+
+        <a href="../index.html#categorias">
+          Categorias
+        </a>
+
+        <a href="../index.html#promocoes">
+          Promoções
+        </a>
+
+        <a href="../index.html#mais-vendidos">
+          Produtos
+        </a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>
+          Ajuda
+        </h4>
+
+        <a href="#">
+          Como funciona
+        </a>
+
+        <a href="#">
+          Entregas
+        </a>
+
+        <a href="#">
+          Pagamentos
+        </a>
+
+        <a href="#">
+          Contactos
+        </a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>
+          Para lojas
+        </h4>
+
+        <a href="#">
+          Ser parceiro
+        </a>
+
+        <a href="#">
+          Área do comerciante
+        </a>
+
+        <a href="#">
+          Termos para parceiros
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom container">
+
+      <span>
+        © 2026 Govila. Todos os direitos reservados.
+      </span>
+
+      <div>
+
+        <a href="#">
+          Privacidade
+        </a>
+
+        <a href="#">
+          Termos
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================
+       SIDE MENU
+  ========================================== -->
+
+  <div
+    class="overlay"
+    id="overlay"
+  ></div>
+
+
+  <aside
+    class="side-menu"
+    id="sideMenu"
+    aria-label="Menu"
+  >
+
+    <div class="side-menu-head">
+
+      <img
+        src="../images/logo.png"
+        alt="Govila"
+      >
+
+      <button
+        class="icon-btn"
+        id="closeMenu"
+        aria-label="Fechar menu"
+      >
+        <i class="hgi-stroke hgi-cancel-01"></i>
+      </button>
+
+    </div>
+
+
+    <div class="side-user">
+
+      <span class="avatar">
+        <i class="hgi-stroke hgi-user"></i>
+      </span>
+
+      <div>
+
+        <strong>
+          Olá, visitante
+        </strong>
+
+        <small>
+          Entre na sua conta
+        </small>
+
+      </div>
+
+      <i class="hgi-stroke hgi-arrow-right-02"></i>
+
+    </div>
+
+
+    <nav class="side-links">
+
+      <a href="../index.html">
+        <i class="hgi-stroke hgi-home-01"></i>
+        Início
+      </a>
+
+      <a href="../index.html#lojas">
+        <i class="hgi-stroke hgi-store-01"></i>
+        Lojas
+      </a>
+
+      <a href="../index.html#categorias">
+        <i class="hgi-stroke hgi-grid-view"></i>
+        Categorias
+      </a>
+
+      <a href="../index.html#promocoes">
+        <i class="hgi-stroke hgi-sale-tag-02"></i>
+        Promoções
+      </a>
+
+      <a href="../index.html#mais-vendidos">
+        <i class="hgi-stroke hgi-fire"></i>
+        Mais vendidos
+      </a>
+
+      <a href="../index.html#entrega">
+        <i class="hgi-stroke hgi-information-circle"></i>
+        Como funciona
+      </a>
+
+    </nav>
+
+
+    <div class="side-menu-footer">
+
+      <button>
+        <i class="hgi-stroke hgi-headphones"></i>
+        Ajuda e suporte
+      </button>
+
+      <button>
+        <i class="hgi-stroke hgi-building-03"></i>
+        Quero vender no Govila
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =========================================
+       CART DRAWER
+  ========================================== -->
+
+  <aside
+    class="cart-drawer"
+    id="cartDrawer"
+  >
+
+    <div class="cart-head">
+
+      <div>
+
+        <span class="section-kicker">
+          Seu pedido
+        </span>
+
+        <h2>
+          Carrinho
+        </h2>
+
+      </div>
+
+      <button
+        class="icon-btn"
+        id="closeCart"
+      >
+        <i class="hgi-stroke hgi-cancel-01"></i>
+      </button>
+
+    </div>
+
+
+    <div
+      class="cart-items"
+      id="cartItems"
+    >
+
+      <div class="cart-empty">
+
+        <i class="hgi-stroke hgi-shopping-cart-01"></i>
+
+        <h3>
+          Seu carrinho está vazio
+        </h3>
+
+        <p>
+          Adicione produtos para começar.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="cart-summary">
+
+      <div>
+
+        <span>
+          Subtotal
+        </span>
+
+        <strong id="cartSubtotal">
+          0 MT
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <span>
+          Entrega estimada
+        </span>
+
+        <strong id="deliveryFee">
+          0 MT
+        </strong>
+
+      </div>
+
+
+      <div class="cart-total">
+
+        <span>
+          Total
+        </span>
+
+        <strong id="cartTotal">
+          0 MT
+        </strong>
+
+      </div>
+
+
+      <button
+        class="btn btn-primary checkout-btn"
+        id="checkoutBtn"
+      >
+
+        Continuar para pagamento
+
+        <i class="hgi-stroke hgi-arrow-right-02"></i>
+
+      </button>
+
+
+      <small>
+
+        <i class="hgi-stroke hgi-shield-01"></i>
+
+        Pagamento e localização protegidos.
+
+      </small>
+
+    </div>
+
+  </aside>
+
+
+  <!-- TOAST -->
+
+  <div
+    class="toast"
+    id="toast"
+  >
+
+    <i class="hgi-stroke hgi-checkmark-circle-02"></i>
+
+    <span>
+      Produto adicionado.
+    </span>
+
+  </div>
+
+</div>
+
+
+<!-- SCRIPTS -->
+
+<script src="../moeda.js"></script>
+<script src="../script.js"></script>
+<script src="../scripts/add.js"></script>
+<script src="product.js"></script>
+<script src="scripts/ratting.js"></script>
+
+</body>
+  </html>
