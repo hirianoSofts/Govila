@@ -1,0 +1,56 @@
+/* =========================================
+   BOTÃO DE QUANTIDADE DO PRODUTO
+========================================= */
+
+.add-btn.quantity-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 0 6px;
+}
+
+.add-btn.quantity-btn:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+.qty-control {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.qty-control > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-minus,
+.qty-plus {
+  width: 27px;
+  height: 27px;
+  border-radius: 7px;
+  background: rgba(255,255,255,.14);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  transition: .18s ease;
+  user-select: none;
+}
+
+.qty-minus:hover,
+.qty-plus:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+.product-qty {
+  min-width: 24px;
+  text-align: center;
+  color: #fff;
+  font-size: 11px;
+  }
